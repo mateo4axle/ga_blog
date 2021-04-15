@@ -1,0 +1,11 @@
+{% for post in site.posts %}
+<li><a href="{{ post.url }}">{{post.title}}</a></li> <br>
+{% endfor %}
+<br>
+<br>
+{{site.data.people}}
+<br>
+<br>
+{% for data in site.data.people %}
+{{data.name}}, {{data.occupation}}<br>
+{% endfor %}

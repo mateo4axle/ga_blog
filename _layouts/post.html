@@ -1,0 +1,19 @@
+---
+layout: wrapper
+---
+{% if page.title == "New Title 3" %}
+This is the 3rd post <br>
+{% elsif page.title == "New Title 2" %}
+This is the 2nd post <br>
+{% else %}
+This is some other post <br>
+{% endif %}
+
+{% for post in site.posts %}
+<li><a style="{% if page.url == post.url %}color:red;{% endif %}" href="{{ post.url }}">{{post.title}}</a></li> <br>
+{% endfor %}
+
+<h1>This is a post using post.html</h1>
+<h2>{{page.title}}</h2>
+<hr>
+{{content}}
